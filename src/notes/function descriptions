@@ -1,0 +1,25 @@
+public boolean stringIsType type(String);
+    check for forbidden characters (characters allowed(A-Z,a-z,0,9))
+    typeof Object || typeof primitive type
+
+"String"
+"int"
+
+public Object<package declaration,imports,class declaration,class body> seperateParts(String fullFile)
+{
+search until first "import" or "package" declaration, and store them if present in variables
+STOP AT CLASS DECLARATION
+
+}
+
+public String,int,int recognizeNextFullFunctionBody(String body);
+{=+1
+}=-1 goal is 0
+IGNORE STRING VALUES
+
+then >> separate imports and class declaration
+imports>>add exposed classes to list
+class(declaration,body)
+declaration, check basic syntax {keywords + "class" + name}
+body, check basic syntax <>()[]
+IGNORE STRING VALUES

@@ -1,0 +1,54 @@
+file-checker
+
+select file path => Optional<file>
+    NO => END PROGRAM(ERROR MESSAGE)
+    YES =>READ FILE INTO VARIABLE {FILE}
+{FILE} DECLARATION
+
+check class name acces-modifier ? , non-access modifier ? ,class type body
+
+divide file into {fields} {functions}
+
+
+TYPES
+get default java library
+get all classnames
+put them in TYPES
+
+make list of all imports
+    FROM IMPORTS GET ALL CLASSNAMES
+   PUT THEM IN TYPES
+
+remove comments("//","/*  */")
+remove all spaces directly before (<];.,'"
+remove spaces and indents {ignore string values} {leave 1 space for split}
+remove and return all function bodies(excluding {})
+remove all string values, (including "" or '')
+
+" {} "
+
+text > String.(" ")
+
+ORDER OF CHECKS:
+BASIC_SYNTAX () {} [] <>; {IGNORE STRING VALUES}
+VALID_FILENAME
+check for FUNCTION PRESENCE
+if yes, for each
+    get function scope
+    VALID FUNCTION NAME
+    check NAMING CONVENTIONS?
+    check for valid () {} [] < >" ;
+
+check for fieLd presence
+if yes, for each
+    VALID FIELD NAME
+    check NAMING CONVENTIONS?
+    check BODY ? for valid ; [] <> ()
+
+FIELD
+{KEYWORDS >1}? {ACCESS MODIFIER 1 }? static? TYPE NAME = VALUE? ;
+zoek naar: access name = {?} ;
+
+FUNCTION
+{KEYWORDS >1}? {ACCESS MODIFIER 1 }? static? {RETURN TYPE} (PARAMS) ({BODY} || ;)
+zoek naar: (modifiers abstract? )(return type) name (params) ({} of ; )
