@@ -10,11 +10,11 @@ public class Main {
         String PATH_TO_FILE ="C:\\Users\\alex-\\IdeaProjects\\fileChecker\\src\\testClasses\\newPackage\\BareBonessClass.java";
        String file= FileParser.loadFile(PATH_TO_FILE);
         System.out.println(file);
-        String pack=DocumentParser.recognizePackageDeclaration(file);
+        String pack= DocumentDivision.recognizePackageDeclaration(file);
         System.out.println(pack);
-        ArrayList<String> imports=DocumentParser.recognizeImports(file);
+        ArrayList<String> imports= DocumentDivision.recognizeImports(file);
         System.out.println(imports);
-        String body=DocumentParser.recognizeClassBody(file);
+        String body= DocumentDivision.recognizeClassBody(file);
         System.out.println(body);
 
 
